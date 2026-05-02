@@ -129,7 +129,7 @@ a {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   align-items: start;
-  padding: clamp(34px, 4.5vw, 58px) 0 clamp(58px, 6vw, 86px);
+  padding: clamp(28px, 4vw, 46px) 0 clamp(44px, 5vw, 68px);
   position: relative;
   z-index: 1;
 }
@@ -284,8 +284,8 @@ h1 {
   gap: 20px;
   align-items: start;
   width: min(100%, 820px);
-  margin-top: 34px;
-  padding: 18px 22px;
+  margin-top: 28px;
+  padding: 16px 20px;
   border: 1px solid rgba(255, 255, 255, 0.32);
   border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.14);
@@ -311,7 +311,7 @@ h1 {
 
 .hero-card h2 {
   margin: 10px 0 6px;
-  font-size: 1.24rem;
+  font-size: 1.18rem;
   line-height: 1.05;
   letter-spacing: -0.045em;
 }
@@ -319,6 +319,11 @@ h1 {
 .hero-card p,
 .hero-card dd {
   color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-card dd {
+  font-size: 0.94rem;
+  line-height: 1.35;
 }
 
 .signal-list {
@@ -352,7 +357,7 @@ h1 {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
   gap: 48px;
-  align-items: start;
+  align-items: center;
 }
 
 .section-heading {
@@ -398,13 +403,24 @@ h1 {
 }
 
 .timeline-meta span,
-.timeline-meta strong {
+.timeline-meta strong,
+.timeline-meta em {
   display: block;
 }
 
 .timeline-meta strong {
-  margin-top: 8px;
   color: var(--ink);
+  font-size: 1.08rem;
+}
+
+.timeline-meta span {
+  margin-top: 12px;
+}
+
+.timeline-meta em {
+  margin-top: 8px;
+  color: var(--muted);
+  font-style: normal;
 }
 
 .timeline-body h3,
@@ -484,19 +500,6 @@ h1 {
   position: relative;
 }
 
-.project-card.featured {
-  background: var(--graphite);
-  color: var(--white);
-}
-
-.project-card.featured::after {
-  color: rgba(255, 255, 255, 0.12);
-}
-
-.project-card.featured p {
-  color: rgba(255, 255, 255, 0.7);
-}
-
 .project-topline {
   display: flex;
   justify-content: space-between;
@@ -517,10 +520,6 @@ h1 {
   margin-top: 12px;
   color: var(--teal-dark);
   font-weight: 700;
-}
-
-.project-card.featured .text-link {
-  color: var(--teal);
 }
 
 .text-link::after {
@@ -567,14 +566,108 @@ section[id] {
   scroll-margin-top: 18px;
 }
 
-.expertise-card h3::before {
+.expertise-visual {
+  position: relative;
+  width: 88px;
+  height: 64px;
+  margin-bottom: 28px;
+}
+
+.expertise-visual::before {
   content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(19, 199, 162, 0.34);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(19, 199, 162, 0.18), transparent 60%),
+    rgba(255, 255, 255, 0.52);
+}
+
+.expertise-visual span {
+  position: absolute;
   display: block;
-  width: 42px;
-  height: 4px;
-  margin-bottom: 22px;
-  border-radius: 999px;
   background: var(--teal);
+}
+
+.visual-structure span:nth-child(1) {
+  left: 18px;
+  bottom: 16px;
+  width: 52px;
+  height: 5px;
+  border-radius: 999px;
+}
+
+.visual-structure span:nth-child(2),
+.visual-structure span:nth-child(3) {
+  bottom: 18px;
+  width: 5px;
+  height: 30px;
+  border-radius: 999px;
+  transform-origin: bottom;
+}
+
+.visual-structure span:nth-child(2) {
+  left: 27px;
+  transform: rotate(28deg);
+}
+
+.visual-structure span:nth-child(3) {
+  right: 27px;
+  transform: rotate(-28deg);
+}
+
+.visual-product span {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+}
+
+.visual-product span:nth-child(1) { left: 18px; top: 16px; }
+.visual-product span:nth-child(2) { right: 18px; top: 16px; }
+.visual-product span:nth-child(3) { left: 18px; bottom: 14px; }
+.visual-product span:nth-child(4) { right: 18px; bottom: 14px; }
+
+.visual-compute span:nth-child(1) {
+  left: 18px;
+  top: 28px;
+  width: 52px;
+  height: 4px;
+  border-radius: 999px;
+}
+
+.visual-compute span:nth-child(2),
+.visual-compute span:nth-child(3) {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  top: 22px;
+}
+
+.visual-compute span:nth-child(2) { left: 14px; }
+.visual-compute span:nth-child(3) { right: 14px; }
+
+.visual-leadership span {
+  border-radius: 50%;
+}
+
+.visual-leadership span:nth-child(1) {
+  left: 34px;
+  top: 12px;
+  width: 20px;
+  height: 20px;
+}
+
+.visual-leadership span:nth-child(2),
+.visual-leadership span:nth-child(3) {
+  top: 34px;
+  width: 14px;
+  height: 14px;
+  opacity: 0.74;
+}
+
+.visual-leadership span:nth-child(2) { left: 20px; }
+.visual-leadership span:nth-child(3) { right: 20px; }
 }
 
 .tag-cloud {
