@@ -212,16 +212,16 @@ h1 {
 
 .hero-portrait {
   width: fit-content;
-  margin: 0 0 18px;
+  margin: 0 0 22px;
 }
 
 .portrait-frame {
   position: relative;
   isolation: isolate;
-  width: clamp(96px, 8.5vw, 124px);
+  width: clamp(136px, 10vw, 168px);
   aspect-ratio: 1;
   margin: 0;
-  padding: 6px;
+  padding: 7px;
   border: 1px solid rgba(255, 255, 255, 0.36);
   border-radius: 999px;
   background:
