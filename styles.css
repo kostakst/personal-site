@@ -127,12 +127,15 @@ a {
 .hero-grid {
   min-height: auto;
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(320px, 0.48fr);
+  grid-template-columns: minmax(0, 1fr);
   align-items: start;
-  gap: clamp(32px, 5vw, 72px);
   padding: clamp(46px, 6vw, 78px) 0 clamp(72px, 7vw, 104px);
   position: relative;
   z-index: 1;
+}
+
+.hero-copy {
+  max-width: 980px;
 }
 
 .eyebrow,
@@ -208,32 +211,24 @@ h1 {
 }
 
 .hero-portrait {
-  margin: 0;
-}
-
-.hero-identity {
-  display: grid;
-  gap: 16px;
-  justify-items: stretch;
-  align-self: start;
-  width: min(100%, 430px);
-  margin-left: auto;
+  width: fit-content;
+  margin: 0 0 22px;
 }
 
 .portrait-frame {
   position: relative;
   isolation: isolate;
-  width: clamp(150px, 14vw, 210px);
+  width: clamp(118px, 11vw, 154px);
   aspect-ratio: 1;
-  margin: 0 0 0 auto;
-  padding: 9px;
+  margin: 0;
+  padding: 7px;
   border: 1px solid rgba(255, 255, 255, 0.36);
   border-radius: 999px;
   background:
     linear-gradient(160deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.08)),
     rgba(255, 255, 255, 0.1);
   box-shadow: 0 32px 90px rgba(0, 72, 62, 0.22);
-  transform: rotate(3deg);
+  transform: rotate(-2deg);
 }
 
 .portrait-frame::before {
@@ -285,11 +280,12 @@ h1 {
 .hero-card {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
+  grid-template-columns: minmax(240px, 0.58fr) minmax(0, 1fr);
+  gap: 24px;
   align-items: start;
-  width: 100%;
-  padding: 24px;
+  width: min(100%, 900px);
+  margin-top: 28px;
+  padding: 22px 24px;
   border: 1px solid rgba(255, 255, 255, 0.32);
   border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.14);
@@ -327,7 +323,7 @@ h1 {
 
 .signal-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
   margin: 0;
 }
@@ -901,10 +897,6 @@ section[id] {
 
   .hero-grid {
     padding: 18px 0 54px;
-  }
-
-  .hero-identity {
-    justify-items: start;
   }
 
   .portrait-frame {
