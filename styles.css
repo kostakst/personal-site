@@ -96,12 +96,22 @@ a {
 .brand {
   display: grid;
   place-items: center;
-  width: 48px;
-  height: 48px;
+  width: 118px;
+  height: 52px;
+  padding: 8px 12px;
   border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
   font-weight: 700;
   letter-spacing: -0.04em;
+}
+
+.brand img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -887,9 +897,10 @@ section[id] {
   }
 
   .brand {
-    width: 44px;
+    width: 92px;
     height: 44px;
     border-radius: 14px;
+    padding: 7px 10px;
   }
 
   .nav-links {
