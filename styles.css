@@ -586,7 +586,7 @@ section[id] {
   width: 100%;
   aspect-ratio: 1.9 / 1;
   margin-bottom: 30px;
-  padding: 10px 12px;
+  padding: 6px 8px;
   border: 1px solid rgba(19, 199, 162, 0.16);
   border-radius: 28px;
   background:
@@ -597,8 +597,8 @@ section[id] {
 
 .expertise-visual img {
   display: block;
-  width: min(92%, 250px);
-  height: 86%;
+  width: min(118%, 300px);
+  height: 96%;
   object-fit: contain;
   mix-blend-mode: multiply;
   filter: saturate(0.92) contrast(1.04);
