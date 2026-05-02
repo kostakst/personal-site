@@ -567,107 +567,26 @@ section[id] {
 }
 
 .expertise-visual {
-  position: relative;
-  width: 88px;
-  height: 64px;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 16 / 10;
   margin-bottom: 28px;
-}
-
-.expertise-visual::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 1px solid rgba(19, 199, 162, 0.34);
-  border-radius: 18px;
+  padding: 14px;
+  border: 1px solid rgba(19, 199, 162, 0.24);
+  border-radius: 22px;
   background:
-    linear-gradient(135deg, rgba(19, 199, 162, 0.18), transparent 60%),
+    linear-gradient(135deg, rgba(19, 199, 162, 0.12), transparent 62%),
     rgba(255, 255, 255, 0.52);
+  overflow: hidden;
 }
 
-.expertise-visual span {
-  position: absolute;
+.expertise-visual img {
   display: block;
-  background: var(--teal);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
-
-.visual-structure span:nth-child(1) {
-  left: 18px;
-  bottom: 16px;
-  width: 52px;
-  height: 5px;
-  border-radius: 999px;
-}
-
-.visual-structure span:nth-child(2),
-.visual-structure span:nth-child(3) {
-  bottom: 18px;
-  width: 5px;
-  height: 30px;
-  border-radius: 999px;
-  transform-origin: bottom;
-}
-
-.visual-structure span:nth-child(2) {
-  left: 27px;
-  transform: rotate(28deg);
-}
-
-.visual-structure span:nth-child(3) {
-  right: 27px;
-  transform: rotate(-28deg);
-}
-
-.visual-product span {
-  width: 18px;
-  height: 18px;
-  border-radius: 6px;
-}
-
-.visual-product span:nth-child(1) { left: 18px; top: 16px; }
-.visual-product span:nth-child(2) { right: 18px; top: 16px; }
-.visual-product span:nth-child(3) { left: 18px; bottom: 14px; }
-.visual-product span:nth-child(4) { right: 18px; bottom: 14px; }
-
-.visual-compute span:nth-child(1) {
-  left: 18px;
-  top: 28px;
-  width: 52px;
-  height: 4px;
-  border-radius: 999px;
-}
-
-.visual-compute span:nth-child(2),
-.visual-compute span:nth-child(3) {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  top: 22px;
-}
-
-.visual-compute span:nth-child(2) { left: 14px; }
-.visual-compute span:nth-child(3) { right: 14px; }
-
-.visual-leadership span {
-  border-radius: 50%;
-}
-
-.visual-leadership span:nth-child(1) {
-  left: 34px;
-  top: 12px;
-  width: 20px;
-  height: 20px;
-}
-
-.visual-leadership span:nth-child(2),
-.visual-leadership span:nth-child(3) {
-  top: 34px;
-  width: 14px;
-  height: 14px;
-  opacity: 0.74;
-}
-
-.visual-leadership span:nth-child(2) { left: 20px; }
-.visual-leadership span:nth-child(3) { right: 20px; }
 }
 
 .tag-cloud {
