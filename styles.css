@@ -777,12 +777,25 @@ section[id] {
 
 .asset-placeholder {
   display: grid;
-  place-items: center;
+  place-items: start;
+  align-content: start;
+  gap: 10px;
   min-height: 150px;
+  padding: 18px;
   border: 1px dashed #aeb8b5;
   border-radius: 18px;
   color: var(--muted);
-  text-align: center;
+  text-align: left;
+}
+
+.asset-placeholder strong {
+  color: var(--ink);
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.asset-placeholder span {
+  line-height: 1.55;
 }
 
 @media (max-width: 900px) {
