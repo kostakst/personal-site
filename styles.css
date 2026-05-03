@@ -388,9 +388,8 @@ h1 {
 .lead {
   color: var(--muted);
   font-size: clamp(1.22rem, 2vw, 1.7rem);
-  display: flex;
-  align-items: center;
   align-self: center;
+  transform: translateY(24px);
 }
 
 .timeline {
@@ -982,7 +981,7 @@ section[id] {
 
   .lead {
     font-size: 1.12rem;
-    display: block;
+    transform: none;
   }
 
   .hero-card,
