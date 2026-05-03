@@ -775,6 +775,34 @@ section[id] {
   margin-top: 18px;
 }
 
+.case-media {
+  margin: 0;
+}
+
+.case-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 16px 44px rgba(17, 24, 23, 0.08);
+}
+
+.case-media-wide {
+  margin-bottom: 28px;
+}
+
+.case-media-wide img {
+  aspect-ratio: 21 / 9;
+}
+
+.case-media figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
 .asset-placeholder {
   display: grid;
   place-items: start;
@@ -796,6 +824,10 @@ section[id] {
 
 .asset-placeholder span {
   line-height: 1.55;
+}
+
+.asset-link {
+  text-decoration: none;
 }
 
 @media (max-width: 900px) {
